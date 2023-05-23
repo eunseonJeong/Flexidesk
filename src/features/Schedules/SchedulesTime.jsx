@@ -18,8 +18,8 @@ function SchedulesTime({ param, selectDay }) {
   const title = '';
   const comment = '';
   const {
-    onClickHandler,
     clickSchedules,
+    setClickSchedules,
     reqScheduleValue,
     scheduleValue,
     setScheduleValue,
@@ -28,12 +28,15 @@ function SchedulesTime({ param, selectDay }) {
   const { schedules } = useSelector(state => state.schedules);
 
   const dispatchValue = __addSchdule;
-  const { onSubmitHandler, onChangeHandler } = useSchedulesHandler(
-    reqScheduleValue,
-    param,
-    setScheduleValue,
-    dispatchValue,
-  );
+  const { onSubmitHandler, onChangeHandler, onClickHandler } =
+    useSchedulesHandler(
+      reqScheduleValue,
+      param,
+      setScheduleValue,
+      dispatchValue,
+      setClickSchedules,
+      clickSchedules,
+    );
 
   return (
     <SchContain width="383px">
@@ -85,8 +88,8 @@ function SchedulesTime({ param, selectDay }) {
           placeholder="내용을 입력하세요."
         />
         <BlueBtn w="90%" mg="auto" mgt="20px">
-          <Text color="var(--white)" shape="T16_700">
-            등록 완료
+          <Text color="var(—white)" shape="T16_700">
+            등록 하기
           </Text>
         </BlueBtn>
       </form>

@@ -89,7 +89,7 @@ function SchedulesTime({ param, selectDay }) {
         />
         <BlueBtn w="90%" mg="auto" mgt="20px">
           <Text color="var(—white)" shape="T16_700">
-            등록 완료
+            등록 하기
           </Text>
         </BlueBtn>
       </form>

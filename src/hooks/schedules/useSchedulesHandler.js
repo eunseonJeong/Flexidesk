@@ -23,6 +23,7 @@ export const useSchedulesHandler = (
       delete value.scId;
     }
     await dispatch(dispatchValue(value));
+    alert('스케줄 등록 되었습니다!');
     navi(`/scheduledetail/${param}`);
   };
 

@@ -48,6 +48,7 @@ export const useReservationHandler = (
 
   const onSubmitHandler = () => {
     dispatch(__addReservation({ reqDatas, param, selectDay }));
+    alert('회의실 예약 되었습니다!');
     navi(`/detail/${userId}`);
   };
 
